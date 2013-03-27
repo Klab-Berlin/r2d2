@@ -20,7 +20,7 @@ var socketServer = new WebSocketServer({
 
 socketServer.on('request', function ( req ) {
 
-	var connection = req.accept( config.protocol, req.origin );
+	var connection = req.accept( config.protocol || null, req.origin );
 
 	connection.on('message', function ( msg ) {
 

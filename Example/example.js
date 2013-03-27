@@ -1,10 +1,5 @@
-var trackSocket = new vwc.Socket //({ server: 'localhost:2020' });
-	({
-		url				: 'localhost',
-		port			: 2020,
-		protocol		: 'test',
-		autoReconnect	: true
-	});
+var trackSocket = new vwc.Socket( 'localhost:2020', { autoReconnect: true });
+
 
 trackSocket.on('open', function ( e ) {
 

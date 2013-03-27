@@ -1,11 +1,7 @@
 var config = {
 
-	port		: 2020,
-	protocol	: 'test'
-
+	port		: 2020
 };
-
-
 
 
 module.exports = config;
