@@ -1,0 +1,5 @@
+{
+	"name"				: "r2d2",
+	"description"		: "A websocket wrapper, to ease the human-machine interaction.",
+	"version"			: "0.1.3"
+}
