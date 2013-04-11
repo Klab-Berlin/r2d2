@@ -1,5 +1,5 @@
 // Temporary Namespace Handling
-if ( !window.vwc ) window.vwc = {};
+//if ( !window.vwc ) window.vwc = {};
 
 /**
  *  vwc.Socket
@@ -15,7 +15,7 @@ if ( !window.vwc ) window.vwc = {};
  */
 
 
-vwc.Socket = (function(){
+window.Socket = (function(){
 
 
 	var config = {
@@ -192,7 +192,8 @@ vwc.Socket = (function(){
 
 			} else {
 
-				socket = new WebSocket( 'ws://' + server.url + ':' + server.port, server.protocol || null );
+				socket = new WebSocket( 'ws://' + server.url + ':' + server.port + '/?' + ( server.parameters || '' ), server.protocol || null );
+
 			}
 
 		} catch ( e ) {
