@@ -1,5 +1,10 @@
 {
 	"name"				: "r2d2",
-	"description"		: "A websocket wrapper, to ease the human-machine interaction.",
-	"version"			: "0.1.3"
+	"description"	: "A WebSocket wrapper to ease the human-machine interaction.",
+	"version"			: "0.2.0",
+  "url"         : "http://github.com/Klab/r2d2",
+  "licence"     : "MIT",
+  "keywords"    : [ "websocket" ],
+  "dependencies": { "websocket" : "~1.0.8" },
+  "engine"      : { "node" : ">= 0.6.0" }
 }
