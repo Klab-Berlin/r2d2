@@ -15,11 +15,13 @@ Therefore we created this simple wrapper based on [websocket-node](https://githu
 
 ## Info
 
-As the other side of connection will probably call a function with the received data,
-the client will encourage this [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call) approach
-and uses following scheme to transmit the data:
+As the other side of the connection will probably call a function with the received data,
+the client will encourage this [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call) approach.
+It uses up to 3 arguments, following this scheme to transmit the data:
 
 `<id> <action> <data>`
+
+The ID will be set automaticly by the wrapper, so [send](https://github.com/Klab-Berlin/r2d2/blob/master/docs/Client.md#socket-send-action-data-) just uses the action and data.
 
 
 ## Features

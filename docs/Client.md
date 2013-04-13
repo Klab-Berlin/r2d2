@@ -7,11 +7,11 @@ The browser module of the WebSocket wrapper.
 ## API Reference
 
 * [Socket](#class-socket)
-  - [.info](#info)
-  - [.on](#on-event-callback-)
-  - [.off](#off-event-callback-)
-  - [.send](#send-action-data-)
-  - [.reconnect](#reconnect)
+  - [.info](#socket-info)
+  - [.on](#socket-on-event-callback-)
+  - [.off](#socket-off-event-callback-)
+  - [.send](#socket-send-action-data-)
+  - [.reconnect](#socket-reconnect)
 
 
 ## Class: Socket
