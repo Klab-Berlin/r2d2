@@ -19,7 +19,7 @@ As the other side of connection will probably call a function with the received 
 the client will encourage this [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call) approach
 and uses following scheme to transmit the data:
 
-```<id><action><data>```
+`<id> <action> <data>`
 
 
 ## Features
