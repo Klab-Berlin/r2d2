@@ -162,29 +162,19 @@ window.Socket = (function(){
    *  @return {[type]} [description]
    */
   function connect() {
-
-    var server = this.server,
-        socket;
-
-    try {
-
-      if ( server.server ) {
-
-        socket = new WebSocket( 'ws://' + server.server );
-
-      } else {
-
-        socket = new WebSocket( 'ws://' + server.url + ':' + server.port + '/?' + ( server.parameters || '' ), server.protocol || null );
-      }
-
-    } catch ( e ) {
-
-      throw new Error( e );
-    }
-
-    this.socket = socket;
-
-    init.call( this, this.config.autoReconnect );
+		var server = this.server,	socket;
+		var wsProtocol = (server.ssl) ? 'wss://' : 'ws://' ;
+		try {
+			if ( server.server ) {
+				socket = new WebSocket( wsProtocol + server.server );
+			} else {
+				socket = new WebSocket( wsProtocol + server.url + ':' + server.port + '/?' + ( server.parameters || '' ), server.protocol || null );
+			}
+		} catch ( e ) {
+			throw new Error( e );
+		}
+		this.socket = socket;
+		init.call( this, this.config.autoReconnect ); 
   }
 
 
